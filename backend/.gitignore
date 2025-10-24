@@ -1,0 +1,33 @@
+# Node modules (large dependency folder)
+node_modules/
+
+# Environment variables (credentials, secrets, DB URLs)
+.env
+*.env
+
+# Prisma artifacts
+prisma/migrations/
+prisma/dev.db
+
+# Log files
+*.log
+
+# System / OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.pid
+*.seed
+*.tmp
+
+# Docker-related (optional)
+docker-compose.override.yml
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Build output (if you ever compile TypeScript or bundle)
+dist/
+build/
