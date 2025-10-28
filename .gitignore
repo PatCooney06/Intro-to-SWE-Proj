@@ -1,0 +1,13 @@
+
+# Secrets
+backend/.env
+frontend/.env
+
+
+# Prisma generated (custom output)
+backend/generated/
+
+
+# Node
+node_modules/
+
