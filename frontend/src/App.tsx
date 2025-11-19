@@ -1,26 +1,24 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
-function Login() {
-  return (
-    <form style={{ maxWidth: 360, margin: "40px auto", display: "grid", gap: 8 }}>
-      <h2>SmartFit Login</h2>
-      <input placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Log in</button>
-    </form>
-  );
-}
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Home from "./pages/Home";
+import History from "./pages/History";
+import Points from "./pages/Points";
+import Profile from "./pages/Profile";
+import AppLayout from "./AppLayout";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <nav style={{ padding: 12, display: "flex", gap: 12 }}>
-        <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
-      </nav>
       <Routes>
-        <Route path="/" element={<div style={{ padding: 24 }}><h1>Home</h1></div>} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/points" element={<Points />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

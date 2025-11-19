@@ -10,7 +10,7 @@ async function fetchJSON(path: string, opts: RequestInit = {}) {
   return data;
 }
 
-export const realApi = {
+export const api = {
   login(body: { email: string; password: string }) {
     return fetchJSON("/auth/login", { method: "POST", body: JSON.stringify(body) });
   },
